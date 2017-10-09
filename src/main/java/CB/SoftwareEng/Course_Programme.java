@@ -9,7 +9,7 @@ public class Course_Programme {
     private LocalDate Start_Date;
     private LocalDate End_Date;
     
-    public Course_Programme(String CourseName, List<Module> moduleList, LocalDate start, LocalDate end){
+    public Course_Programme(String CourseName, ArrayList<Module> moduleList, LocalDate start, LocalDate end){
         this.Course_Name = CourseName;
         this.Modules = moduleList;
         this.Start_Date = start;
@@ -56,7 +56,7 @@ public class Course_Programme {
         System.out.println("Students registered for " + this.getCourse_Name() + ":");
         for (int i =0; i<ModulesList.size(); i++){
             Module mod = ModulesList.get(i);
-            //System.out.println("Module: " + mod.getModule_Name() + " | " + mod.getModule_ID());
+       
             List<Student> ModStudents = new ArrayList<Student>();
             ModStudents = mod.getStudentList();
             for (int j=0; j<ModStudents.size(); j++){
